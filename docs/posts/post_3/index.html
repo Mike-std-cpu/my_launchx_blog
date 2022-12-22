@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title> - Bitácora de Viaje de Mike Andrade</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="https://mike-std-cpu.github.io/my_launchx_blog/favicon.png">
+
+  
+  
+  <link rel="stylesheet" href="../../css/style.min.4f4767d518839223786999cdb69fc7a63791220ecccd236bc732a5f998aaee2d.css">
+  
+
+  
+    
+    <meta property="og:title" content=""/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="https://mike-std-cpu.github.io/my_launchx_blog/posts/post_3/"/>
+    
+    
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:site" content="@devhuh_mik"/>
+    <meta name="twitter:creator" content="@devhuh_mik"/>
+  
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet"> 
+</head>
+
+
+
+
+<body class='page frame page-blog-single'>
+  <div id="wrapper" class="wrapper">
+    <div class='header'>
+  <a class="header-logo" href="https://mike-std-cpu.github.io/my_launchx_blog/">Bitácora de Viaje de Mike Andrade</a>
+  <div class="menu-main">
+    <ul>
+        
+        
+            <li class="menu-item-aboutme">
+                <a href="../../pages/about/">AboutMe</a>
+            </li>
+        
+            <li class="menu-item-posts">
+                <a href="../../posts/">Posts</a>
+            </li>
+        
+    </ul>
+  </div>
+</div>
+    
+  <div class="blog">
+    
+    <div class="intro">
+      <h1><span class="dot">.</span></h1>
+      
+    </div>
+    <div class="content">
+      <h1 id="que-es-_npm_-introduciendo-al-mundo-de-js">¿Que es <em>npm</em>? Introduciendo al mundo de JS.</h1>
+<p><strong>npm</strong> es parte esencial de Node.js, el entorno de ejecución de <em>javaScript</em> en el lado del servidor basado en el motor V8 de Google. Es muy seguramente la principal razón del gran éxito de Node permitiendo que cientos de desarrolladores puedan compartir paquetes de software entre distintos proyectos.</p>
+<blockquote>
+<p>En este momento, se han publicado 1,493,231 paquetes por medio de su repositorio con más de 27 mil millones de descargas.</p>
+</blockquote>
+<p><strong>npm</strong> responde a las siglas de <strong>Node Package Manager</strong> o manejador de paquetes de node, es la herramienta por defecto de JavaScript para la tarea de compartir e instalar paquetes.</p>
+<p>Tal como reza su documentación, <strong>npm</strong> se compone de al menos dos partes principales.</p>
+<ul>
+<li>Un repositorio online para publicar paquetes de software libre para ser utilizados en proyectos Node.js</li>
+<li>Una herramienta para la terminal (command line utility) para interactuar con dicho repositorio que te ayuda a la instalación de utilidades, manejo de dependencias y la publicación de paquetes.</li>
+</ul>
+<p>Es decir, en tu proyecto basado en Node — que actualmente incluye los proyectos de aplicaciones web que utilizan Node para su proceso de compilación y generación de archivos — utilizarás la utilidad de linea de comandos (cli) <strong>para consumir paquetes desde el repositorio online</strong> , un listado gigantesco de soluciones de software para distintos problemas disponibles públicamente en <a href="http://npmjs.com/">npmjs.com</a> y para manejar dependencias, y para ello necesitas un archivo de configuración que le diga a <strong>npm</strong> que este es un proyecto node.</p>
+<h2 id="el-archivo-packagejson">El archivo package.json📦</h2>
+<p>Famoso dentro de la comunidad de desarrolladores en javaScript, este archivo indica a npm que <em>el directorio en el que se encuentra es en efecto un proyecto o paquete npm</em>. Este archivo contiene la información del paquete incluyendo la descripción del mismo, versión, autor y más importante aún dependencias.</p>
+<p>Este archivo es indemdiatamente creado con todas las <code>configuraciones</code> necesarias de npm para poder ejecutarlo correctamente, basta con ejecutar el sigueinte comando:</p>
+<blockquote>
+<p><code>npm init</code></p>
+</blockquote>
+<p>Dentro de la lienas de comando, preguntara información necesaria para comenzar a configurar el proyecto:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="err">$</span> <span class="nx">npm</span> <span class="nx">init</span>
+<span class="nx">This</span> <span class="nx">utility</span> <span class="nx">will</span> <span class="nx">walk</span> <span class="nx">you</span> <span class="nx">through</span> <span class="nx">creating</span> <span class="nx">a</span> <span class="kn">package</span><span class="p">.</span><span class="nx">json</span> <span class="nx">file</span><span class="p">.</span>
+<span class="nx">It</span> <span class="nx">only</span> <span class="nx">covers</span> <span class="nx">the</span> <span class="nx">most</span> <span class="nx">common</span> <span class="nx">items</span><span class="p">,</span> <span class="nx">and</span> <span class="nx">tries</span> <span class="nx">to</span> <span class="nx">guess</span> <span class="nx">sensible</span> <span class="nx">defaults</span><span class="p">.</span>
+
+<span class="nx">See</span> <span class="s">`npm help init`</span> <span class="k">for</span> <span class="nx">definitive</span> <span class="nx">documentation</span> <span class="nx">on</span> <span class="nx">these</span> <span class="nx">fields</span>
+<span class="nx">and</span> <span class="nx">exactly</span> <span class="nx">what</span> <span class="nx">they</span> <span class="nx">do</span><span class="p">.</span>
+
+<span class="nx">Use</span> <span class="s">`npm install &lt;pkg&gt;`</span> <span class="nx">afterwards</span> <span class="nx">to</span> <span class="nx">install</span> <span class="nx">a</span> <span class="kn">package</span> <span class="nx">and</span>
+<span class="nx">save</span> <span class="nx">it</span> <span class="nx">as</span> <span class="nx">a</span> <span class="nx">dependency</span> <span class="nx">in</span> <span class="nx">the</span> <span class="kn">package</span><span class="p">.</span><span class="nx">json</span> <span class="nx">file</span><span class="p">.</span>
+
+<span class="nx">Press</span> <span class="p">^</span><span class="nx">C</span> <span class="nx">at</span> <span class="nx">any</span> <span class="nx">time</span> <span class="nx">to</span> <span class="nx">quit</span><span class="p">.</span>
+<span class="kn">package</span> <span class="nx">name</span><span class="p">:</span> <span class="p">(</span><span class="nx">test</span><span class="p">)</span>
+
+</code></pre></div><p>Para mayor información sobre el llenado de estas dependencias ejecuta <code>npm help init</code></p>
+<p>Dentro de estas configuraciónes, se enlistara la tematica de cada pregunta realizada por <em>npm</em>.</p>
+<ul>
+<li>
+<p><strong>version</strong>: Corresponde a la versión de tu proyecto. Lo ideal es mantener este campo actualizado cuando modificas algo en tu proyecto o librería utilizando por ejemplo <a href="https://semver.org/lang/es/">semver</a>.</p>
+</li>
+<li>
+<p><strong>description</strong>: Una breve descripción de tu proyecto. Particularmente importante si lo que estás creando es un paquete que publicarás vía npm.</p>
+</li>
+<li>
+<p><strong>entry point:</strong> Define cuál será el punto de &ldquo;entrada&rdquo; de tu proyecto. Esto es, que archivo se ejecutará cuando se importe tu proyecto dentro de otro. Nuevamente, especialmente importante para paquetes de librerías.</p>
+</li>
+<li>
+<p><strong>test command:</strong> Aquí puedes definir el comando que quieres ejecutar para realizar las pruebas de tu proyecto, este comando se ejecutará cuando escribas <code>npm run test</code> en tu terminal.</p>
+</li>
+<li>
+<p><strong>git repository</strong>: Define la url del repositorio git en donde este proyecto está alojado, se utiliza para informar a los usuarios de tu paquete el repositorio en donde encontrar el código fuente del proyecto.</p>
+</li>
+<li>
+<p><strong>author:</strong> El nombre e email de quien creó este proyecto.</p>
+</li>
+<li>
+<p><strong>license</strong>: Identifica el tipo de licencia de uso de tu proyecto. Permite a las personas saber que y que no está permitido al usar tu código. Puedes encontrar la lista completa de licencias soportadas por este campo <a href="https://spdx.org/licenses/">aquí</a>.</p>
+</li>
+<li>
+<p><strong>private:</strong> Es un valor boolean que te permite evitar que tu paquete se publique en el repositorio. Si lo que estás creando es un proyecto personal este valor será <strong>true.</strong></p>
+</li>
+</ul>
+<h3 id="scripts">Scripts📄</h3>
+<p>Dentro del archivo <strong>package.json</strong> podremos ver dependencias, configuraciónes proporcionadas con la data que nosotros le hayamos proporcionado en la sección anterior.  Esta sección define un listado de propiedades que permiten ejecutar comandos dentro del contexto de tu proyecto incluyendo: comandos de otros paquetes listados como dependencias, scripts personalizados, scripts bash, etc.</p>
+<p>Aqui estan las secciónes que podemos configurar sin nungun problema:</p>
+<ul>
+<li>
+<p><strong>start:</strong> Primero ejecuta el script <strong>generate</strong> y luego inicia la aplicación web. <code>react-scripts</code> es una dependencia del paquete y se encuentra disponible dentro del directorio <code>node_modules</code>.</p>
+</li>
+<li>
+<p><strong>build:</strong> Ejecuta la compilación de la aplicación en modo producción.</p>
+</li>
+<li>
+<p><strong>lint:</strong> Ejecuta el proceso de linting (revisión de formato y estilo de código) del proyecto (Puedes leer más sobre este proceso en el <a href="https://www.freecodecamp.org/espanol/news/que-es-linting-y-eslint/">primer artículo</a> de esta colección)</p>
+</li>
+<li>
+<p><strong>test:</strong> Ejecuta el script de pruebas basado en el paquete <strong>jest</strong> que también está instalado como dependencia.</p>
+</li>
+<li>
+<p><strong>prettier</strong>: Ejecuta <strong>prettier</strong> mediante el uso de <strong>npx.</strong> Este es un paquete especial de npm que permite ejecutar binarios dentro del alcance de tu proyecto sin necesidad de especificar dicho comando como script dentro del archivo <code>package.json</code>.</p>
+</li>
+</ul>
+<h2 id="mis-dependencias">Mis dependencias.</h2>
+<p>Dentro de este mundo de <strong>npm</strong> y gracias a varios bootcamps que me han enseñado a usar e implementar dependencias muy utilides dentro de node, enlistare las dependencias que conosco y se que esnecniales.</p>
+<ul>
+<li><a href="https://www.npmjs.com/package/winston">Winston</a> : <em>Administrador de loggers en JS.</em></li>
+<li><a href="https://www.npmjs.com/package/eslint">ESLint</a> : <em>Correciones de sintaxis y buenas practicas de JS</em></li>
+<li><a href="https://www.npmjs.com/package/chalk">Chalk</a> : <em>Colorisa los <code>console.log()</code> que definamos.</em></li>
+<li><a href="https://www.npmjs.com/package/axios">Axios</a> : <em>Administrador de API&rsquo;s que se requeiran exportar o importar.</em></li>
+<li><a href="https://www.npmjs.com/package/react">React</a> : <em>Descarga de dependencias de React.</em></li>
+</ul>
+<blockquote>
+<p>Información sustraida del post de npm <a href="https://www.freecodecamp.org/espanol/news/que-es-npm/">Blog de Matias Hernandez </a></p>
+</blockquote>
+<hr>
+<p>🪄 Thanks for watching by <a href="https://github.com/Mike-std-cpu">@Mike Andrade</a><!-- raw HTML omitted --></p>
+
+    </div>
+  </div>
+
+    <div class="footer">
+  
+  <div class="footer-social">
+    
+      <span class="social-icon social-icon-twitter">
+        <a href="https://twitter.com/devhuh_mik" title="twitter" target="_blank" rel="noopener">
+          <img src="../../images/social/twitter.svg" width="24" height="24" alt="twitter"/>
+        </a>
+      </span>
+    
+      <span class="social-icon social-icon-github">
+        <a href="https://github.com/mike-std-cpu" title="github" target="_blank" rel="noopener">
+          <img src="../../images/social/github.svg" width="24" height="24" alt="github"/>
+        </a>
+      </span>
+    
+  </div>
+  
+</div>
+  </div>
+
+  
+
+  
+
+  
+  <script type="text/javascript" src="../../js/bundle.min.e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js"></script>
+  
+
+  
+  
+
+  
+  
+  
+    
+  
+
+
+</body>
+</html>
