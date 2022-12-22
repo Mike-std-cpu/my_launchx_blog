@@ -1,4 +1,8 @@
-# ¿Que es _npm_? Introduciendo al mundo de JS.
+---
+title: "¿Que es _npm_? Introduciendo al mundo de JS."
+date: 2022-12-21
+description: 'El uso de npm y su importancia.'
+---
 
 **npm** es parte esencial de Node.js, el entorno de ejecución de _javaScript_ en el lado del servidor basado en el motor V8 de Google. Es muy seguramente la principal razón del gran éxito de Node permitiendo que cientos de desarrolladores puedan compartir paquetes de software entre distintos proyectos.
 
