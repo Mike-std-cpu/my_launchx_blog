@@ -1,5 +1,5 @@
 ---
-title: "¿Que es _npm_? Introduciendo al mundo de JS."
+title: "¿Que es npm? Introduciendo al mundo de JS."
 date: 2022-12-21
 description: 'El uso de npm y su importancia.'
 ---
