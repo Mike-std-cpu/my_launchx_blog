@@ -38,6 +38,16 @@ Valores &amp;amp; sentimientos.  Compromiso. Responsabilidad. Confianza. Dedicac
     </item>
     
     <item>
+      <title></title>
+      <link>https://mike-std-cpu.github.io/my_launchx_blog/posts/post_3/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mike-std-cpu.github.io/my_launchx_blog/posts/post_3/</guid>
+      <description>¿Que es npm? Introduciendo al mundo de JS. npm es parte esencial de Node.js, el entorno de ejecución de javaScript en el lado del servidor basado en el motor V8 de Google. Es muy seguramente la principal razón del gran éxito de Node permitiendo que cientos de desarrolladores puedan compartir paquetes de software entre distintos proyectos.
+ En este momento, se han publicado 1,493,231 paquetes por medio de su repositorio con más de 27 mil millones de descargas.</description>
+    </item>
+    
+    <item>
       <title>About me</title>
       <link>https://mike-std-cpu.github.io/my_launchx_blog/pages/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
